@@ -1,4 +1,4 @@
-console.log("som");
+console.log("som");           // Day2
 
 // 1.Primitive
  // There are 7 types : string , Number , Boolean , Null
