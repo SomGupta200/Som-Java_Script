@@ -31,7 +31,7 @@ const obj3 = {5: "a" , 6: "b"}
 // - Simple way to merge or clone objects.
 
 const obj4 = {...obj1 , ...obj2 , ...obj3}  // Instead of assign
-// we can also use thee spread (...) operator
+// we can also use the spread (...) operator
 // console.log(obj4);
 
 const users = [  // Array of Object
