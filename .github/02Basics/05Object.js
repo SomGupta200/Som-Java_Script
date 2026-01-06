@@ -5,7 +5,7 @@ const course = {
 }
 // console.log(course.courseInstructor);
 
-// Tradittional way
+// Traditional way
 //const money = course.price;
 
 
