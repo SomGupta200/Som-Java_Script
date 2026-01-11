@@ -1,0 +1,53 @@
+-> An IIFE (Immediately Invoked Function Expression) in JavaScript
+ is a function that runs immediately after it is defined.
+  It’s mainly used to create a private scope for variables, 
+  avoid polluting the global namespace, and execute code right 
+  away without needing to call the function later.
+
+
+What is an IIFE?
+- Definition: An IIFE is a function expression that is executed as soon as it is defined.
+- Syntax:
+(function () {
+    // Code here runs immediately
+    let localVar = "Hello from IIFE!";
+    console.log(localVar);
+})();
+- The function is wrapped in parentheses (function(){...}) to make it an expression, and then followed by () to invoke it immediately.
+
+🎯 Why Use IIFE?
+- Encapsulation: Keeps variables and logic private, preventing conflicts with other code.
+- Avoid Global Pollution: Stops temporary variables from leaking into the global scope.
+- Initialization: Useful for running setup code once (e.g., configuration, event binding).
+- Module Pattern (Pre-ES6): Before ES6 modules, IIFEs were widely used to simulate modular code.
+- Performance & Safety: Helps avoid naming collisions in large projects.
+
+📌 Where/When to Use IIFE
+- Variable Privacy: When you want temporary variables that shouldn’t be accessible outside.
+- One-time Execution: For initialization logic (e.g., setting up event listeners, configs).
+- Libraries/Frameworks: Many older JS libraries (like jQuery plugins) used IIFEs to wrap code.
+- Polyfills: To define features without interfering with existing code.
+- Encapsulating async logic: Often used with closures to capture values in loops.
+
+⚡ Examples
+1. Basic IIFE
+(function() {
+    console.log("This runs immediately!");
+})();
+
+
+2. IIFE with Parameters
+(function(name) {
+    console.log("Hello " + name);
+})("Som");
+
+
+3. Using Arrow Functions
+(() => {
+    console.log("IIFE with arrow function!");
+})();
+
+⚠️ Things to Keep in Mind
+- You cannot self-invoke a function declaration, only a function expression.
+- Overuse of IIFEs can make code harder to read; ES6 modules often replace them today.
+- Still useful in legacy codebases or when working in environments without module support.
